@@ -3,18 +3,20 @@ import GRITSBOT_MESSAGES as messenger
 import json
 
 
-# f = open("json.txt", "w+")
 UDP_IP="0.0.0.0"
+
+#GRITSBots listen on this port, computer sends
 UDP_PORT_OUT = 4998
+#GRITSBots send on this port, computer listens
 UDP_PORT_IN = 4999
-MESSAGE={"msgType":str(messenger.MSG_UPDATE_FIRMWARE)}
-#
-#
-# print (MESSAGE)
+
+
+#Setup socket for UDP
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-#sock.sendto(MESSAGE.encode(), (UDP_IP,UDP_PORT_OUT))
+
 sock.bind((UDP_IP, UDP_PORT_IN))
 while True:
+    #Listen to GRITSBots messages infinitely
     data, addr = sock.recvfrom(256)
     # f.write(data.decode('UTF-8'))
     data = data.decode("UTF-8")

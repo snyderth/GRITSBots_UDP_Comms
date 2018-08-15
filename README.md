@@ -18,7 +18,7 @@ A script to send messages to all GRITSBots currently running on the network. Thi
 
 A script to upload the newfirmware.bin to the raspberry pi's http server. 
 
-##Arduino folder structure
+## Arduino folder structure
 
 ```
 Arduino
@@ -37,12 +37,12 @@ Arduino
 	|	|_GRITSBot_Main_ESP8266.cpp
 	|	|_GRITSBot_Main_ESP8266.h
 	|	|_examples
-	|		|_basic_firmware
+	|		|_basic_firmware (Contains original example, shows as example in Arduino IDE)
 	|		|_random_walk
 	|_GRITSBot_Messages
 	|_GRITSBot_Motor
 	|	|_examples
-	|		|_basic_firmware
+	|		|_basic_firmware(Contains original example, shows as example in Arduino IDE)
 	|		|_random_walk
 	|_GRITSBot_WiFiConfig
 	|_GRITSBot_WirelessInterface
